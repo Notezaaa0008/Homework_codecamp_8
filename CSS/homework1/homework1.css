@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600&display=swap');
+html {
+    font-family: 'Kanit', sans-serif;
+}
+body {
+    background: url(https://picsum.photos/id/1031/2000) ;
+}
+.card{
+    display: inline-block;
+    box-shadow: 4px 8px 8px silver;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color:skyblue;
+    color: white;
+}
+
+.card1{
+    display: inline-block;
+    box-shadow: 4px 8px 8px silver;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+}
+
+.card2{
+    display: inline-block;
+    box-shadow: 4px 8px 8px silver;
+    width: 300px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+.img1 {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    margin-bottom: -4px;
+}
+
+.container{
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.container1{
+    margin-top: -4px;
+    padding: 2px 16px;
+    text-align: center;
+    background-color: skyblue;
+    border-radius: 0 0 5px 5px;
+}
+
+.container2{
+    margin-top: -4px;
+    padding: 2px 16px;
+    text-align: center;
+    background-color: skyblue;
+    border-radius: 0 0 5px 5px;
+}

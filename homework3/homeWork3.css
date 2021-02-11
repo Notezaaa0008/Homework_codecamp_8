@@ -1,0 +1,376 @@
+* {margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+
+.container {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    
+}
+
+header {
+    background: #f0f2f5;
+    justify-content: center;
+    padding-bottom: 120px;
+    padding-top: 72px;
+    min-width: 500px;
+    
+}
+
+.dheader {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    height: 496px;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 980px;
+}
+
+.text {
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    width: 490px;
+    height: 266.8px;
+}
+
+.text div:first-child {
+    padding: 112px 0 16px;
+}
+
+.logo {
+    border: 0;
+    height: 106px;
+    margin: -28px;
+}
+
+.logo_sub {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 28px;
+    width: auto;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 496px;
+    width: 490px;
+}
+
+.login>.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    padding: 20px 0 28px;
+    width: 396px;
+    height: 387.8px;
+}
+
+.username {
+    background: #ffffff ;
+    color: #1d2129;
+    cursor: text;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 19px;
+    padding: 14px 16px;
+    width: 330px;
+    height: 22px;
+    line-height: 16px;
+}
+
+.password {
+    background: #ffffff ;
+    color: #1d2129;
+    cursor: text;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 19px;
+    padding: 14px 16px;
+    width: 330px;
+    height: 22px;
+    line-height: 16px;
+}
+
+/* input[type=text]:focus {
+    border: 5px solid skyblue;
+} */
+
+/* input[type=password]:focus {
+    border: 1px solid skyblue;
+} */
+
+form div:nth-child(4) {
+    margin-top: 16px;
+}
+
+.linkforgotpass {
+    color: #1877f2;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.line {
+    border-bottom: 1px solid #dadde1;
+    margin: 20px 16px;
+    font-size: 14px;
+    width: 364px;
+}
+
+.blogin {
+    background-color: #1877f2;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 48px;
+    padding: 0 16px;
+    width: 364px;
+    height: 48px;
+    
+}
+
+.blogin:hover{
+    background-color: #1b61bd;
+}
+
+.bsignup {
+    background-color: #42b72a;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 48px;
+    padding: 0 16px;
+    height: 48px;
+
+}
+
+.bsignup:hover{
+    background-color: #328621;
+}
+
+.undertable {
+    color: #1c1e21;
+    border-top: none;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 28px;
+    padding-top: 0;
+}
+
+.createpage {
+    color: #1c1e21;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    color: #737373;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    width: 980px;
+}
+
+ul  {
+    display: flex;
+    font-size: 14px;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+}
+
+ul>div {
+    position: relative;
+}
+
+.li0 {
+    color: #737373;
+    text-decoration: none;
+}
+
+.li1 {
+    color: #737373;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.li0:hover, .li1:hover, .li2:hover, .createpage:hover, .linkforgotpass:hover{
+    text-decoration: underline;
+}
+
+.language {
+    padding-top: 20px;
+}
+
+.contentCurve {
+    border-bottom: 1px solid #dddfe2;
+    font-size: 3px;
+    height: 8px;
+    margin-bottom: 8px;
+}
+
+.other {
+    line-height: 1.6;
+    margin-left: -20px;
+}
+
+.othersub>sub {
+    position: relative;
+}
+
+.list1 {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+.li2 {
+    color: #737373;
+    text-decoration: none;
+}
+
+.copyright { 
+    cursor: text;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.tooltip {
+    visibility: hidden;
+    border: 1px solid black;
+    color: black;
+    font-size: 11px;
+    background-color:#ffffff;
+    text-align: center;
+    padding: 5px;
+    
+
+    position: absolute;
+    z-index: 1;
+    bottom: -25px;
+}
+
+.li0:hover .tooltip, .li1:hover .tooltip, .li2:hover .tooltip{
+    visibility: visible;
+}
+
+.tooltip1 {
+    visibility: hidden;
+    border: 1px solid black;
+    color: black;
+    font-size: 11px;
+    background-color:#ffffff;
+    text-align: center;
+    padding: 5px;
+    
+
+    position: absolute;
+    z-index: 1;
+    bottom: -45px;
+}
+
+.li2:hover .tooltip1{
+    visibility: visible;
+}
+
+
+@media only screen and (max-width: 1075px) {
+    .dheader {
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        height: 496px;
+        margin: 0 40px;
+        padding: 20px 0;
+        
+    }
+    .text {
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        width: 400px;
+        height: 266.8px;
+    }
+
+    footer {
+        display: flex;
+        color: #737373;
+        flex-flow: column wrap;
+        margin: 0 40px;
+        width: auto;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 496px;
+        width: 490px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    header {
+        background: #f0f2f5;
+        justify-content: center;
+        padding-bottom: 170px;
+        padding-top: 20px;
+        min-width: 500px;
+        
+    }
+
+    .dheader {
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 496px;
+        margin: 0 40px;
+        padding: 20px 0;
+        width: auto;
+    }
+
+    .text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        width: 400px;
+        height: 130.8px;
+    }
+
+    .text div:first-child {
+        padding: 0 0 16px;
+    }
+
+    .login {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 496px;
+        width: 490px;
+    }
+}

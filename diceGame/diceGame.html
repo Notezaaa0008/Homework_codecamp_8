@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 10px solid blue;
+        }
+
+        .container-player {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .player1 {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            background-color: palegreen;
+            width: 50%;
+            height: 700px;
+        }
+
+        .player2 {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            background-color: palevioletred;
+            width: 50%;
+            height: 700px;
+        }
+
+        .button {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            width: 97.5%;
+            height: 700px;
+        }
+
+        .newgame {}
+
+        .rollandholds {
+            display: flex;
+            flex-flow: column wrap;
+        }
+
+        .rooldice {
+            margin: 15px 0px;
+        }
+
+        .holddice {
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 id="winner"></h1>
+        </div>
+
+        <div class="container-player">
+            <div class="player1">
+                <div>
+                    <h1>Player1</h1>
+                    <h1 class="totalscore1"></h1>
+                </div>
+
+                <div class="current1">
+                    <h3>CURRENT</h3>
+                    <h3 class="score1"></h3>
+                </div>
+
+            </div>
+
+            <div class="player2">
+                <div>
+                    <h1>Player2</h1>
+                    <h1 class="totalscore2"></h1>
+                </div>
+
+                <div>
+                    <h3>CURRENT</h3>
+                    <h3 class="score2"></h3>
+                </div>
+
+            </div>
+
+            <div class="button">
+                <div class="newgame">
+                    <button onclick="newGame()">New Game</button>
+                </div>
+                <div class="rollandholds">
+                    <button id="roll" class="rolldice" onclick="rollDice()">ROLL DICE</button>
+                    <button id="holds" class="holddice" onclick="holds()">HOLDS</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        let player_current = "player1";
+        const players = {
+            player1: {
+                score: 0,
+                total: 0
+            },
+            player2: {
+                score: 0,
+                total: 0
+            }
+        }
+
+        const randomDice = () => {
+            return Math.floor(Math.random() * 6 + 1);
+        };
+
+        function rollDice() {
+            const player = players[player_current];
+            player.score = randomDice();
+
+            if (player.score != 1) {
+                player.total = player.total + player.score;
+            } else {
+                if (player_current === "player1") {
+                    player_current = "player2"
+                } else {
+                    player_current = "player1"
+                }
+            }
+            setScreen();
+            if (player.total >= 100) {
+                winner();
+            }
+
+        }
+
+        function holds() {
+            const player = players[player_current];
+            if (player.total >= 100) {
+                winner();
+            } else {
+                if (player_current === "player1") {
+                    player_current = "player2"
+                } else {
+                    player_current = "player1"
+                }
+            }
+        }
+        function winner() {
+            document.getElementById("winner").innerHTML = `${player_current} WIN!`;
+            document.getElementById("holds").disabled = true;
+            document.getElementById("roll").disabled = true;
+        }
+
+        function newGame() {
+            players.player1.score = 0;
+            players.player1.total = 0;
+            players.player2.score = 0;
+            players.player2.total = 0;
+            setScreen();
+            document.getElementById("winner").innerHTML = ``;
+            document.getElementById("holds").disabled = false;
+            document.getElementById("roll").disabled = false;
+        }
+
+        function setScreen() {
+            const score1 = document.querySelector(".score1");
+            score1.innerHTML = players.player1.score;
+            const score2 = document.querySelector(".score2");
+            score2.innerHTML = players.player2.score;
+            const totalScore1 = document.querySelector(".totalscore1");
+            totalScore1.innerHTML = players.player1.total;
+            const totalScore2 = document.querySelector(".totalscore2");
+            totalScore2.innerHTML = players.player2.total;
+        }
+        setScreen();
+    </script>
+</body>
+
+</html>

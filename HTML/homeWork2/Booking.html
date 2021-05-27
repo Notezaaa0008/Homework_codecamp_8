@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+</head>
+
+<body>
+    <fieldset style="border-radius: 20px;">
+        <legend>Book Flight</legend>
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <label>Flying From :</label><br>
+                            <select name="Flying From" id="">
+                                <option value="">Please select location</option>
+                                <option value="Krabi" selected>Krabi</option>
+                                <option value="Bangkok">Bangkok</option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <label>To :</label><br>
+                            <select name="To" id="">
+                                <option value="">Please select location</option>
+                                <option value="Phuket" selected>Phuket</option>
+                                <option value="Udon Thani">Udon Thani</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div>
+                            <label>Departing :</label><br>
+                            <input type="date" value="2021-01-31" disabled>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <label>Returning :</label><br>
+                            <input placeholder="Select Date" type="text" onfocus="(this.type='date')">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="">Adult :</label><br>
+                        <input type="number" placeholder="1" min="1">
+                    </td>
+
+                    <td>
+                        <label for="">Child :</label><br>
+                        <input type="number" placeholder="0" min="0">
+                    </td>
+
+                    <td>
+                        <label for="">Infant :</label><br>
+                        <input type="number" placeholder="0" min="0">
+                    </td>
+
+                    <td>
+                        <label for="">Currency :</label><br>
+                        <select name="Currency" id="">
+                            <option value="">Please select a currency</option>
+                            <option value="THB">THB</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </td>
+                </tr>
+
+            </table>
+
+            <button type="submit"
+                style="background-color: orange; color: white; margin: 10px 0px 0px 0px; padding: 5px 5px; border-radius: 5PX;">SEARCH</button>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>

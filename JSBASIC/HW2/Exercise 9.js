@@ -10,8 +10,11 @@
 //   );
 
 const ask = (question, yes, no) => {
-    if (confirm(question)) { yes() }
-    else { no() };
+    if (confirm(question)) {
+        yes()
+    } else {
+        no()
+    };
 }
 
 ask(

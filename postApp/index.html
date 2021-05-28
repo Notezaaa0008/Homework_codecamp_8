@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lets React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17.0.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+
+      function GreetingMessage(props) {
+        props.age = props.age + 50;
+        return (
+          <h1 className="hello-react-text">
+            Hello, {props.name} !, <br /> Age: {props.age}
+          </h1>
+        );
+      }
+
+      const element = (
+        <div className="container">
+          <GreetingMessage name="React" age={30} />
+          <GreetingMessage name="World" age={25} />
+          <GreetingMessage name="John" age={60} />
+        </div>
+      );
+
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>

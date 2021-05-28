@@ -543,7 +543,7 @@ keys = Array.from(keys);
 
 keys.push("more");
 
-console.log(keys)
+console.log(keys);
 
 
 //EX12
